@@ -62,13 +62,10 @@
     }
 
     /* Home Banner */
-.banner {
+.banner img {
   width: 100%;
-  height: 50vh; /* স্ক্রিনের 80% উচ্চতা নিবে */
-  background-image: url("banner.png.JPEG");
-  background-size: cover; /* ছবিকে কভার করবে */
-  background-position: center; /* ছবির মাঝখান দেখাবে */
-  background-repeat: no-repeat;
+  height: auto;
+  object-fit: cover;  /* ছবিকে কেটে না দিয়ে মানিয়ে নেয় */
 }
     
     .banner p {
@@ -183,6 +180,11 @@ footer .social-icons a:hover {
     </div>
   </div>
 
+<!-- Banner Section -->
+    <section class="banner">
+  <img src="banner.png.JPEG" alt="Banner Image">
+    </section>
+  
   <!-- Home Section -->
   <div id="home" class="section active">
     <div class="banner">
@@ -291,6 +293,7 @@ footer .social-icons a:hover {
 </body>
 
 </html>
+
 
 
 
