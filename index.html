@@ -63,21 +63,12 @@
 
     /* Home Banner */
 .banner {
-  background-image: url("banner.png.JPEG"); /* তোমার ছবির path */
-  background-size: cover;          /* ছবিটা div পুরোটা কভার করবে */
-  background-position: center;     /* মাঝখান থেকে দেখাবে */
-  background-repeat: no-repeat;    /* রিপিট করবে না */
   width: 100%;
-  height: 50vh;                   /* ল্যাপটপে পুরো স্ক্রিন */
-}
-
-/* মোবাইল স্ক্রিনের জন্য */
-@media (max-width: 768px) {
-  .banner {
-    width: 100%;
-    height: 20vh;                  /* মোবাইলে height কমানো */
-    background-position: top center; /* চাইলে উপরের দিক থেকে ফোকাস করা */
-  }
+  height: 50vh; /* স্ক্রিনের 80% উচ্চতা নিবে */
+  background-image: url("banner.png.JPEG");
+  background-size: cover; /* ছবিকে কভার করবে */
+  background-position: center; /* ছবির মাঝখান দেখাবে */
+  background-repeat: no-repeat;
 }
     
     .banner p {
@@ -300,6 +291,7 @@ footer .social-icons a:hover {
 </body>
 
 </html>
+
 
 
 
