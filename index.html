@@ -197,6 +197,38 @@ body::before {
       .banner h1 { font-size: 28px; }
     }
 
+      /* Prefectorial সেকশনের জন্য */
+  #prefectorial .top-card {
+    width: 100%;
+    max-width: 400px;   /* চাইলে সীমা দিন */
+    margin: 20px auto;
+  }
+
+  /* নিচের কার্ডগুলো পাশাপাশি */
+  #prefectorial .bottom-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  #prefectorial .bottom-cards .card {
+    width: 220px;
+  }
+
+  /* রেসপনসিভ */
+  @media (max-width: 768px) {
+    #prefectorial .bottom-cards .card {
+      width: 45%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #prefectorial .bottom-cards .card {
+      width: 90%;
+    }
+  }
+
     /* Footer Style */
 footer {
   position: fixed;        /* 👈 সবসময় নিচে থাকবে */
@@ -329,31 +361,45 @@ footer .social-icons a:hover {
     </div>
   </div>
 
-  <!-- Prefectorial Board -->
-  <div id="prefectorial" class="section">
-    <h2>PREFECTS OF 2024</h2>
-    <div class="container">
-      <div class="card">
-        <img src="WhatsApp Image 2025-08-18 at 6.20.25 PM.jpeg" alt="Prefect">
-        <h3>JONY ISLAM HRIDOY</h3>
-        <p>(S.P)</p>
-        <div class="btn-group">
-          <a href="tel:+8801555444333" class="btn btn-call">📞 কল</a>
-          <a href="mailto:arif@example.com" class="btn btn-email">✉️ ইমেইল</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="prefect2.jpg" alt="Prefect">
-        <h3>RIFAN HASAN FAHIM</h3>
-        <p>(A.S.P)</p>
-        <div class="btn-group">
-          <a href="tel:+8801999888777" class="btn btn-call">📞 কল</a>
-          <a href="mailto:sabrina@example.com" class="btn btn-email">✉️ ইমেইল</a>
-        </div>
-      </div>
+<!-- Prefectorial Board -->
+<div id="prefectorial" class="section">
+  <h2>PREFECTS OF 2024</h2>
+
+  <!-- প্রথম কার্ড (উপরে একা থাকবে) -->
+  <div class="top-card card">
+    <img src="prefect1.jpg" alt="Prefect">
+    <h3>JONY ISLAM HRIDOY</h3>
+    <p>(S.P)</p>
+    <div class="btn-group">
+      <a href="tel:+8801555444333" class="btn btn-call">📞 কল</a>
+      <a href="mailto:arif@example.com" class="btn btn-email">✉️ ইমেইল</a>
     </div>
   </div>
 
+  <!-- নিচের সব কার্ড পাশাপাশি -->
+  <div class="bottom-cards">
+    <div class="card">
+      <img src="prefect2.jpg" alt="Prefect">
+      <h3>RIFAN HASAN FAHIM</h3>
+      <p>(A.S.P)</p>
+      <div class="btn-group">
+        <a href="tel:+8801999888777" class="btn btn-call">📞 কল</a>
+        <a href="mailto:sabrina@example.com" class="btn btn-email">✉️ ইমেইল</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="prefect3.jpg" alt="Prefect">
+      <h3>ANOTHER PREFECT</h3>
+      <p>(Member)</p>
+      <div class="btn-group">
+        <a href="tel:+8801888888888" class="btn btn-call">📞 কল</a>
+        <a href="mailto:example@example.com" class="btn btn-email">✉️ ইমেইল</a>
+      </div>
+    </div>
+  </div>
+</div>
+  
   <script>
     function showSection(sectionId) {
       let sections = document.getElementsByClassName("section");
@@ -377,6 +423,7 @@ footer .social-icons a:hover {
 </body>
 
 </html>
+
 
 
 
