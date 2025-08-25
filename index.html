@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" type="image/png" href="favicon.ico">
   <meta charset="UTF-8">
   <title>অকৃত্তিম-২৪'</title>
@@ -223,6 +224,13 @@ body::before {
     }
   }
 
+        /* coordinator সেকশনের জন্য */
+  #coordinator .top-card {
+    width: 100%;
+    max-width: 400px;   /* চাইলে সীমা দিন */
+    margin: 20px auto;
+  }
+
   @media (max-width: 480px) {
     #prefectorial .bottom-cards .card {
       width: 90%;
@@ -230,38 +238,81 @@ body::before {
   }
 
     /* Footer Style */
-footer {
-  position: fixed;        /* 👈 সবসময় নিচে থাকবে */
-  bottom: 0;              /* 👈 একদম নিচে আটকানো */
-  left: 0;
-  width: 100%;
-  background: #007bff2f;
-  color: #000000;
-  padding: 5px 0;
-  text-align: center;
-  margin-top: 40px;
-}
+  .footer {
+    background: #111;
+    color: #ddd;
+    padding: 40px 0 20px;
+    font-family: Arial, sans-serif;
+  }
 
-footer p {
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+
+  .footer-col {
+    flex: 1 1 250px;
+    margin: 15px;
+  }
+
+  .footer-col h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  .footer-col p,
+  .footer-col a {
+    font-size: 14px;
+    color: #bbb;
+    text-decoration: none;
+  }
+
+  .footer-col a:hover {
+    color: #fff;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  .social-links a {
+  display: inline-block;
   margin: 5px 0;
-  font-size: 10px;
-}
-
-footer .social-icons {
-  margin-top: 10px;
-}
-
-footer .social-icons a {
-  color: #000000;
-  margin: 0 10px;
+  color: #bbb;
   text-decoration: none;
-  font-size: 14px;
-  transition: color 0.3s;
+  font-size: 15px;
 }
 
-footer .social-icons a:hover {
-  color: #00aced; /* Hover এ রঙ পরিবর্তন */
+.social-links a i {
+  margin-right: 8px;
+  font-size: 18px;
+  color: #3b5998; /* Facebook blue */
 }
+
+.social-links a:hover {
+  color: #fff;
+}
+
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .footer-col {
+      margin: 10px 0;
+    }
+  }
 
   </style>
 </head>
@@ -275,7 +326,7 @@ footer .social-icons a:hover {
     </div>
     <div class="menu">
       <a href="#" onclick="showSection('prefectorial')">Prefectorial Board</a>
-      <a href="#" onclick="showSection('coordinators')">CO-Ordinator's Panel</a>
+      <a href="#" onclick="showSection('coordinator')">CO-Ordinator's Panel</a>
       <a href="#" onclick="showSection('members')">Members</a>
       <a href="#" onclick="showSection('prefectorial')">Part Of Us</a>
     </div>
@@ -312,27 +363,47 @@ footer .social-icons a:hover {
   </div>
 
   <!-- Batch Co-ordinators Panel -->
-  <div id="coordinators" class="section">
+  <div id="coordinator" class="section">
     <h2>CO-ORDINATORS</h2>
-    <div class="container">
-      <div class="card">
-        <img src="WhatsApp Image 2025-08-18 at 6.06.52 PM.jpeg" alt="Coordinator">
-        <h3>ZIHAD RAHMAN</h3>
-        <p>Batch Co-ordinator</p>
-        <div class="btn-group">
-          <a href="tel:+8801711000000" class="btn btn-call">📞 কল</a>
-          <a href="mailto:rahman@example.com" class="btn btn-email">✉️ ইমেইল</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="WhatsApp Image 2025-08-18 at 6.00.05 PM.jpeg" alt="Coordinator">
-        <h3>FAHIM SHARIF</h3>
-        <p>Batch Co-ordinator</p>
-        <div class="btn-group">
-          <a href="tel:+8801811000000" class="btn btn-call">📞 কল</a>
-          <a href="mailto:sumaiya@example.com" class="btn btn-email">✉️ ইমেইল</a>
-        </div>
-      </div>
+    <div class="top-card card">
+     <img src="WhatsApp Image 2025-08-18 at 6.06.52 PM.jpeg" alt="Prefect">
+     <h3>ZIHAD RAHMAN</h3>
+     <p>BATCH CO-ORDINATOR</p>
+     <div class="btn-group">
+      <a href="tel:+8801555444333" class="btn btn-call">📞 Call</a>
+      <a href="https" class="btn btn-facebook">🌐 Facebook</a>
+      <a href="mailto:arif@example.com" class="btn btn-email">✉️ Email</a>
+     </div>
+    </div>
+    <div class="top-card card">
+     <img src="WhatsApp Image 2025-08-18 at 6.20.25 PM.jpeg" alt="Prefect">
+     <h3>JONY ISLAM HRIDOY</h3>
+     <p>BATCH CO-ORDINATOR</p>
+     <div class="btn-group">
+      <a href="tel:+8801555444333" class="btn btn-call">📞 Call</a>
+      <a href="https" class="btn btn-facebook">🌐 Facebook</a>
+      <a href="mailto:arif@example.com" class="btn btn-email">✉️ Email</a>
+     </div>
+    </div>
+    <div class="top-card card">
+     <img src="WhatsApp Image 2025-08-18 at 6.00.05 PM.jpeg" alt="Prefect">
+     <h3>FAHIM SHARIF</h3>
+     <p>BATCH CO-ORDINATOR</p>
+     <div class="btn-group">
+      <a href="tel:+8801555444333" class="btn btn-call">📞 Call</a>
+      <a href="https" class="btn btn-facebook">🌐 Facebook</a>
+      <a href="mailto:arif@example.com" class="btn btn-email">✉️ Email</a>
+     </div>
+    </div>
+    <div class="top-card card">
+     <img src="Alisha Zaman.jpeg" alt="Prefect">
+     <h3>ALISHA BINTE ZAMAN</h3>
+     <p>BATCH CO-ORDINATOR</p>
+     <div class="btn-group">
+      <a href="tel:+8801555444333" class="btn btn-call">📞 Call</a>
+      <a href="https" class="btn btn-facebook">🌐 Facebook</a>
+      <a href="mailto:arif@example.com" class="btn btn-email">✉️ Email</a>
+     </div>
     </div>
   </div>
 
@@ -642,18 +713,50 @@ footer .social-icons a:hover {
   </script>
 
 <!-- Footer Section -->
-<footer>
-  <p>Important Links:</p>
-  <div class="social-icons">
-    <a href="https://www.facebook.com/profile.php?id=100092624018705" target="_blank">🌐অকৃত্তিম-২৪</a>
-    <a href="https://cpskalumni.com/" target="_blank">🌐Alumni Association of CPSK</a>
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Column 1 -->
+    <div class="footer-col">
+      <h3>About Us</h3>
+      <p>This official webpage of our batch functions as the primary platform for storing and accessing the complete information of all our students.</p>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+      <li><a href="https://www.facebook.com/profile.php?id=100092624018705">অকৃত্তিম-২৪'</a></li>
+      <li><a href="https://cpskalumni.com/">Alumni Association of CPSK</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <p>📍 Jahanabad Cant. Khulna</p>
+      <p>📞 +8801XXXXXXXXX</p>
+      <p>✉️ batch24@example.com</p>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="footer-col">
+      <h3>Follow Us</h3>
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=100092624018705" target="_blank"><i class="fab fa-facebook"></i> অকৃত্তিম-২৪'</a>
+      </div>
+    </div>
   </div>
-  <p>&copy; 2025 Official webpage of (অকৃত্তিম-২৪). All Rights Reserved.</p>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Official webpage of অকৃত্তিম-২৪' | All Rights Reserved.</p>
+  </div>
 </footer>
 
 </body>
 
 </html>
+
 
 
 
