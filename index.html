@@ -51,6 +51,46 @@
       background: #000000;
     }
 
+    /* headline container */
+.headline-ticker {
+  background: #007bff2f;
+  color: rgb(0, 0, 0);
+  overflow: hidden;
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 3px solid #000000;
+}
+
+/* wrapper */
+.ticker-wrap {
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* animation */
+.ticker {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: tickerMove 30s linear infinite;
+}
+
+.ticker span {
+  display: inline-block;
+  padding: 0 50px;
+}
+
+@keyframes tickerMove {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+    
     /* WaterMark */
     body {
     position: relative;
@@ -205,6 +245,18 @@ footer .social-icons a:hover {
     </div>
   </div>
 
+<!-- 🔹 Navbar এর নিচে headline ticker বসান -->
+<div class="headline-ticker">
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>অকৃত্তিম-২৪' এ আপনাকে স্বাগতম।</span>
+      <span>এটি আমাদের ব্যাচ এর ওয়েবপেজ।  যার মাধ্যে ২৪ব্যাচের সকল তথ্য সংরক্ষিত করা হয়েছে।</span>
+      <span>এই ওয়েবপেজ এর যেকোনো তথ্য প্রয়োজনে স্বয়ংক্রিয় ভাবে পরিবর্তন হবে।</span>
+      <span>ব্যাচের সকল শিক্ষার্থীদের ফোন নাম্বার আমাদের কাছে সুরক্ষিত আছে।  নিরাপত্তার কথা মাথায় রেখে সেগুলোকে এখানে প্রকাশ করা হয়নি।  তবে কারোর দরকার হলে সুনির্দিষ্ট কারণ দর্শনের মাধ্যমে কো-অরডিনেটর প্যানেলের সাথে যোগাযোগ করতে হবে।</span>
+    </div>
+  </div>
+</div>
+  
 <!-- Banner Section -->
     <section class="banner">
   <img src="banner.png.JPEG" alt="Banner Image">
@@ -321,6 +373,7 @@ footer .social-icons a:hover {
 </body>
 
 </html>
+
 
 
 
