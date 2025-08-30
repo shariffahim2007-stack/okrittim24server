@@ -11,7 +11,14 @@
       margin: 0;
       background: #f4f4f4;
     }
-
+ 
+    /* পুরো পেজে সিলেকশন নিষিদ্ধ */
+    body {
+      user-select: none;
+     -webkit-user-select: none; /* Safari */
+     -ms-user-select: none;     /* IE/Edge */
+}
+    
     /* Navbar */
     .navbar {
       display: flex;
@@ -955,6 +962,11 @@ body::before {
       }
       document.getElementById(sectionId).classList.add("active");
     }
+
+     document.addEventListener("copy", function(e) {
+    e.preventDefault(); // কপি আটকানো
+    alert("❌ দুষ্টামি বন্ধ করুন!"); // সতর্ক বার্তা
+  }); 
   </script>
 
 <!-- Footer Section -->
